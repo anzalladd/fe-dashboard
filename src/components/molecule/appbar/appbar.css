@@ -1,0 +1,16 @@
+.appbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color:#1572A1;
+    padding: 20px;
+    color: white;
+}
+
+.logout {
+    cursor: pointer;
+}
+
+.appbar p{
+    margin-bottom: 5px;
+}

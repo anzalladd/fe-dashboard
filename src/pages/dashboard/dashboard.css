@@ -1,0 +1,71 @@
+.dashboard {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    padding: 15px;
+}
+
+.dashboard__sidebar {
+    width: 400px;
+}
+
+.dashboard__content {
+    width: 100%;
+}
+
+.dashboard__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.dashboard__list__card {
+    flex: 1;
+    height: 400px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: -2px -4px 45px 0px rgba(147, 180, 201, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard__list__card:nth-child(2) canvas {
+    width: 400px !important;
+    height: 400px !important;
+}
+
+.table {
+    margin-top: 40px;
+    box-shadow: -2px -4px 45px 0px rgba(147, 180, 201, 0.35);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.table__header {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    color: #1572A1;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.089);
+}
+
+.table__header div {
+    flex: 1;
+}
+
+.table__content {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.table__content div {
+    flex: 1;
+}

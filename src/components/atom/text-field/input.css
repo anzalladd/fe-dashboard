@@ -1,0 +1,11 @@
+.input {
+    background-color: rgba(209, 209, 209, 0.068);
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: -2px -4px 45px 0px rgba(147, 180, 201, 0.35);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(147, 180, 201, 0.35);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(147, 180, 201, 0.35);
+}
