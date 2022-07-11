@@ -29,8 +29,8 @@ class BaseService implements BaseServiceInterface {
       baseURL: BASE_URL,
     });
   }
-  includeDefaultOptions(options: {}) {
-    let accessToken = window.localStorage.getItem("token");
+  async includeDefaultOptions(options: {}) {
+    let accessToken = await window.localStorage.getItem("token");
     this.setBaseUrl();
     if (accessToken !== null) {
       const defaultData = {
@@ -43,8 +43,8 @@ class BaseService implements BaseServiceInterface {
     }
     return options;
   }
-  get(options = {}) {
-    const opts = this.includeDefaultOptions(options);
+  async get(options = {}) {
+    const opts = await this.includeDefaultOptions(options);
     return this.http.get(this.endPoint, opts);
   }
   getNoAuth(options = {}, api = "") {
@@ -58,22 +58,22 @@ class BaseService implements BaseServiceInterface {
     const opts = Object.assign(options, data);
     return this.http.get(this.endPoint, opts);
   }
-  post(payloads: any, options = {}) {
-    const opts = this.includeDefaultOptions(options);
+  async post(payloads: any, options = {}) {
+    const opts = await this.includeDefaultOptions(options);
     return this.http.post(this.endPoint, payloads, opts);
   }
-  patch(payloads: any, options = {}) {
-    const opts = this.includeDefaultOptions(options);
+  async patch(payloads: any, options = {}) {
+    const opts = await this.includeDefaultOptions(options);
     return this.http.patch(this.endPoint, payloads, opts);
   }
 
-  put(payloads: any, options = {}) {
-    const opts = this.includeDefaultOptions(options);
+  async put(payloads: any, options = {}) {
+    const opts = await this.includeDefaultOptions(options);
     return this.http.put(this.endPoint, payloads, opts);
   }
 
-  delete(options = {}) {
-    const opts = this.includeDefaultOptions(options);
+  async delete(options = {}) {
+    const opts = await this.includeDefaultOptions(options);
     return this.http.delete(this.endPoint, opts);
   }
 }
